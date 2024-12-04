@@ -1,0 +1,197 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(to right, rgb(24,214,220), rgb(17,54,71));
+   
+}
+* {
+    box-sizing: border-box;
+}
+.container {
+    margin-top: 150px;
+     display: flex;
+     justify-content: center;
+
+}
+
+
+[type="button"] {
+
+    margin: 10px;
+    padding: 15px 45px;
+    border: none;
+    outline: none;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    transition:  0.5s ease;
+    background-color: rgb(33, 96, 168);
+    border-radius: 10px;
+    margin-left: 50px;
+    margin-top: 10px;
+   
+}
+
+[type="button"]:hover {
+    background-image: linear-gradient(to right, rgb(24,214,220), rgb(17,54,71));
+    color: #fff;
+    box-shadow: 0 0 10px #eee;
+    text-decoration: none;
+}
+
+.aside p {
+    color: white;
+    z-index: 3;
+    margin-left: 50px;
+} 
+
+
+
+
+/* login form  */
+
+ ::placeholder {
+    color: gray;
+}
+
+input {
+    width: 250px;
+}
+
+.screenlogin {
+    
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 3px solid #fff;
+    height: 450px;
+    border-radius: 3%;
+    width: 350px;
+
+}
+
+#textlogin {
+    text-align: center;
+    font-size: 50px;
+    color: rgb(254, 254, 254);
+    border-bottom: 2px solid rgb(25, 180, 185);
+    
+    
+
+}
+
+
+
+.inputis label {
+    position: relative;
+    top: 15px;
+}
+
+
+
+[type="password"] {
+    z-index: 1;
+    border: none;
+    margin: 10px;
+    height: 25px;
+    outline: none;
+    color: white;
+    background: none;
+    border-bottom: 2px solid white;
+
+}
+
+[type="email"] {
+    border: none;
+    margin: 10px;
+    height: 25px;
+    outline: none;
+    color: white;
+    background: none;
+    border-bottom: 2px solid white;
+
+}
+
+[type="text"] {
+    border: none;
+    margin: 10px;
+    height: 25px;
+    outline: none;
+    color: white;
+    background: none;
+    border-bottom: 2px solid white;
+
+}
+
+[type="submit"] {
+    width: 70%;
+    margin-right: 10px;
+    padding: 15px 45px;
+    border: none;
+    outline: none;
+    text-align: center;
+    color: white;
+    text-transform: uppercase;
+    transition:  0.5s ease;
+    background-color:  rgb(25, 180, 185);
+    border-radius: 10px;
+    margin-top: 20px;
+   
+}
+
+[type="submit"]:hover {
+    background-image: linear-gradient(to right, rgb(24,214,220), rgb(17,54,71));
+    color: #fff;
+    box-shadow: 0 0 10px #eee;
+    text-decoration: none;
+}
+
+
+.peagape {
+    color: white;
+    margin-left: 10px;
+
+}
+
+
+.inputis label {
+    margin-left: 10px;
+    margin-top: 10px;
+    color: white;
+}
+
+
+#mensagem{
+    color: white;
+
+}
+  
+  #envio {
+    text-align: center;
+
+  }
+  
+  #logonn {
+    text-align: center;
+  } */
+
+/* responsividade */
+
+ 
+    .main {
+        width: 90%;
+        box-sizing: border-box;
+        margin-left: 20px;
+        height:129vh;
+    }
+    .aside {
+        width: 90%;
+        box-sizing: border-box;
+        margin-left: 20px;
+        height: 119vh;
+
+    }
+
+

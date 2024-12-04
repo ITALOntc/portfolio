@@ -1,0 +1,18 @@
+*{
+    margin:0;
+    padding: 0;
+}
+body{
+    width: 100px;
+    height: 100vh;
+    font-family: 'POppins', sans-serif;
+    background: linear-gradient(-45deg, #ffce51,#ff7253,#fd5754);
+w
+}
+
+#form{
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: ;
+}

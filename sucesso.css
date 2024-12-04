@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+.mensagem {
+    text-align: center;
+    margin: 100px auto;
+    padding: 20px;
+    max-width: 400px;
+    background-color: #ffffff;
+    border: 1px solid #dddddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: #009900;
+}
+
+p {
+    color: #333333;
+}

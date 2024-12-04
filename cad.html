@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="teste.css">
+    <title>CADASTRAR</title>
+    <link href="https://cdn01.jotfor.ms/static/formCss.css?3.3.43285" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="https://cdn02.jotfor.ms/css/styles/nova.css?3.3.43285" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <style>
+        
+   /* nav */
+     .container-fluid{
+         text-align: center;
+         margin-left: 400px;
+         
+     }
+     .form-control{
+         margin-left: 30px;
+         width: 500px;
+     }
+     p{
+         margin: 0;
+         padding: 0;
+     }
+
+     .bu{
+         margin: 12px;
+         margin-right: 50px;
+
+     }
+     .dropdown-menu{
+         width: 130px;
+     }
+
+.container{
+  margin-top: 50px;
+  max-width: 2000px;
+ 
+  
+  
+}
+.cont1{
+ width: 700px;
+  text-align: center;
+  
+margin-left:500px ;
+}
+button{
+    background-color: black;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 10px;
+}
+input[type=submit],input[type=reset]{
+    background-color: black;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    margin-left:100px ;
+    
+}
+#form-line jf-required{
+  padding: 0;
+  margin: 0%;
+}
+
+    </style>
+
+
+
+<style type="text/css" id="form-designer-style">
+    /* Injected CSS Code */
+/*PREFERENCES STYLE*/
+    .form-all {
+      font-family: Lucida Grande, sans-serif;
+    }
+  
+    .form-label.form-label-auto {
+      
+    display: block;
+    float: none;
+    text-align: left;
+    width: 100%;
+  
+    }
+  
+    .form-line {
+      margin-top: 12px;
+      margin-bottom: 12px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  
+    .form-all {
+      max-width: 800px;
+      width: 100%;
+    }
+  
+    .form-label.form-label-left,
+    .form-label.form-label-right,
+    .form-label.form-label-left.form-label-auto,
+    .form-label.form-label-right.form-label-auto {
+      width: 150px;
+    }
+  
+    .form-all {
+      font-size: 14px
+    }
+  
+    .supernova .form-all, .form-all {
+      background-color: #ffffff;
+    }
+  
+    .form-all {
+      color: #000000;
+    }
+    .form-header-group .form-header {
+      color: #000000;
+    }
+    .form-header-group .form-subHeader {
+      color: #000000;
+    }
+    .form-label-top,
+    .form-label-left,
+    .form-label-right,
+    .form-html,
+    .form-checkbox-item label,
+    .form-radio-item label,
+    span.FITB .qb-checkbox-label,
+    span.FITB .qb-radiobox-label,
+    span.FITB .form-radio label,
+    span.FITB .form-checkbox label,
+    [data-blotid][data-type=checkbox] [data-labelid],
+    [data-blotid][data-type=radiobox] [data-labelid],
+    span.FITB-inptCont[data-type=checkbox] label,
+    span.FITB-inptCont[data-type=radiobox] label {
+      color: #000000;
+    }
+    .form-sub-label {
+      color: #1a1a1a;
+    }
+  
+  .supernova {
+    background-color: #ffffff;
+  }
+  .supernova body {
+    background: transparent;
+  }
+  
+    .form-textbox,
+    .form-textarea,
+    .form-dropdown,
+    .form-radio-other-input,
+    .form-checkbox-other-input,
+    .form-captcha input,
+    .form-spinner input {
+      background-color: #ffffff;
+    }
+  
+    .supernova {
+      background-image: none;
+    }
+    #stage {
+      background-image: none;
+    };
+  
+    .form-all {
+      background-image: none;
+    }
+  .form-all:before { content: none; } .form-all { margin-top: 0px; }/*PREFERENCES STYLE*//*__INSPECT_SEPERATOR__*/
+.form-label.form-label-auto {
+        
+      display: block;
+      float: none;
+      text-align: left;
+      width: 100%;
+    
+      }
+    /* Injected CSS Code */
+</style>
+ <script>
+        
+        function limpa_formulário_cep() {
+                //Limpa valores do formulário de cep.
+                document.getElementById('rua').value=("");
+                document.getElementById('bairro').value=("");
+                document.getElementById('cidade').value=("");
+                document.getElementById('uf').value=("");
+                // document.getElementById('ibge').value=("");
+        }
+    
+        function meu_callback(conteudo) {
+            if (!("erro" in conteudo)) {
+                //Atualiza os campos com os valores.
+                document.getElementById('rua').value=(conteudo.logradouro);
+                document.getElementById('bairro').value=(conteudo.bairro);
+                document.getElementById('cidade').value=(conteudo.localidade);
+                document.getElementById('uf').value=(conteudo.uf);
+                // document.getElementById('ibge').value=(conteudo.ibge);
+            } //end if.
+            else {
+                //CEP não Encontrado.
+                limpa_formulário_cep();
+                alert("CEP não encontrado.");
+            }
+        }
+            
+        function pesquisacep(valor) {
+    
+            //Nova variável "cep" somente com dígitos.
+            var cep = valor.replace(/\D/g, '');
+    
+            //Verifica se campo cep possui valor informado.
+            if (cep != "") {
+    
+                //Expressão regular para validar o CEP.
+                var validacep = /^[0-9]{8}$/;
+    
+                //Valida o formato do CEP.
+                if(validacep.test(cep)) {
+    
+                    //Preenche os campos com "..." enquanto consulta webservice.
+                    document.getElementById('rua').value="...";
+                    document.getElementById('bairro').value="...";
+                    document.getElementById('cidade').value="...";
+                    document.getElementById('uf').value="...";
+                    // document.getElementById('ibge').value="...";
+    
+                    //Cria um elemento javascript.
+                    var script = document.createElement('script');
+    
+                    //Sincroniza com o callback.
+                    script.src = 'https://viacep.com.br/ws/'+ cep + '/json/?callback=meu_callback';
+    
+                    //Insere script no documento e carrega o conteúdo.
+                    document.body.appendChild(script);
+    
+                } //end if.
+                else {
+                    //cep é inválido.
+                    limpa_formulário_cep();
+                    alert("Formato de CEP inválido.");
+                }
+            } //end if.
+            else {
+                //cep sem valor, limpa formulário.
+                limpa_formulário_cep();
+            }
+        };
+    
+        </script>
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary" data-bs-theme="dark" >
+        <div class="container-fluid"  >
+          <a class="navbar-brand" href="index.html">I&G Outlet</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+         
+            <form class="d-flex" width="1000px" role="search">
+              <input class="form-control me-2"  type="search" placeholder="O que você procura?" aria-label="Search"  >
+              <button class="btn btn-outline-primary" type="submit">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+              </svg>  </button>
+            </form>
+          
+          </div>
+        </div>
+
+          
+        
+
+        <div class="dropdown">
+          <a class="btn btn-dark dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <svg xmlns="http://www.w3.org/2000/svg" width="15" height="16" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+              <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+              <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+            </svg>
+          </a>
+        
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="cad.html">Cadastrar</a></li>
+            <li><a class="dropdown-item" href="login.html">Entrar</a></li>
+            
+          </ul>
+        </div>
+<div class="bu">
+        <button type="button" class="btn btn-dark position-relative">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart-check-fill" viewBox="0 0 16 16">
+            <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm-1.646-7.646-3 3a.5.5 0 0 1-.708 0l-1.5-1.5a.5.5 0 1 1 .708-.708L8 8.293l2.646-2.647a.5.5 0 0 1 .708.708z"/>
+          </svg>
+          <span class="position-absolute top-0 start-100 translate-middle p-2 bg-danger border border-light rounded-circle">
+            <span class="visually-hidden">New alerts</span>
+          </span>
+        </button>
+    </div>
+        
+
+    </nav>
+    
+      <nav class="navbar bg-dark border-bottom border-bottom-dark" data-bs-theme="dark">
+        
+      </nav>
+
+      
+
+<form action="cadastro.php" method="post" ><input type="hidden" name="formID" value="232035344739658" /><input type="hidden" id="JWTContainer" value="" /><input type="hidden" id="cardinalOrderNumber" value="" />
+  <div role="main" class="form-all">
+    <link type="text/css" rel="stylesheet" media="all" href="https://cdn.jotfor.ms/wizards/languageWizard/custom-dropdown/css/lang-dd.css?3.3.43645" />
+    <div class="cont"><input type="text" id="input_language" name="input_language" style="display:none" />
+      <div class="language-dd" id="langDd" style="display:none">
+        <div class="dd-placeholder lang-emp">Language</div>
+        <ul class="lang-list dn" id="langList">
+          <li data-lang="pt-BR" class="pt-BR">Portuguese (Brazil)</li>
+        </ul>
+      </div>
+    </div>
+    <script type="text/javascript" src="https://cdn.jotfor.ms/js/formTranslation.v2.js?3.3.43645"></script>
+    <ul class="form-section page-section">
+      <li id="cid_1" class="form-input-wide" data-type="control_head">
+        <div class="form-header-group  header-large">
+          <div class="header-text httac htvam">
+            <div class="title">
+                <h2>Formulário de Cadastro</h2>
+                <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                    <path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555ZM0 4.697v7.104l5.803-3.558L0 4.697ZM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757Zm3.436-.586L16 11.801V4.697l-5.803 3.546Z"/>
+                  </svg>
+                </div>
+                          </div>
+        </div>
+      </li>
+      <li class="form-line form-line-column form-col-1 jf-required" data-type="control_fullname" id="id_61"><label class="form-label form-label-top form-label-auto" id="label_61" for="first_61"> Nome Completo<span class="form-required">*</span> </label>
+        <div id="cid_61" class="form-input-wide jf-required">
+          <div data-wrapper-react="true"><span class="form-sub-label-container" style="vertical-align:top" data-input-type="first"><input type="text" id="first_61" name="Nome" class="form-textbox validate[required]" data-defaultvalue="" autoComplete="section-input_61 given-name" size="10" value="" data-component="first" aria-labelledby="label_61 sublabel_61_first" required="" /><label class="form-sub-label" for="Nome" id="sublabel_61_first" style="min-height:13px" aria-hidden="false">Nome</label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="last"><input type="text" id="last_61" name="Nome2" class="form-textbox validate[required]" data-defaultvalue="" autoComplete="section-input_61 family-name" size="15" value="" data-component="last" aria-labelledby="label_61 sublabel_61_last" required="" /><label class="form-sub-label" for="Nome2" id="sublabel_61_last" style="min-height:13px" aria-hidden="false">Sobrenome</label></span></div>
+        </div>
+      </li>
+      <li class="form-line form-line-column form-col-2 jf-required" data-type="control_email" id="id_48"><label class="form-label form-label-top form-label-auto" id="label_48" for="input_48"> E-mail<span class="form-required">*</span> </label>
+        <div id="cid_48" class="form-input-wide jf-required"> <span class="form-sub-label-container" style="vertical-align:top"><input type="email" id="input_48" name="email" class="form-textbox validate[required, Email]" data-defaultvalue="" size="30" value="" data-component="email" aria-labelledby="label_48 sublabel_input_48" required="" /><label class="form-sub-label" for="email" id="sublabel_input_48" style="min-height:13px" aria-hidden="false">exemplo@exemplo.com.br</label></span> </div>
+      </li>
+      <li class="form-line form-line-column form-col-3 jf-required" data-type="control_textbox" id="id_63"><label class="form-label form-label-top form-label-auto" for="cpf" id="label_63" for="input_63"> CPF<span class="form-required">*</span> </label>
+        <div id="cid_63" class="form-input-wide jf-required"> <input type="cpf" id="input_63" name="cpf" data-type="input-textbox" class="form-textbox validate[required]" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_63" required="" /><label class="form-sub-label" for="cpf" id="sublabel_input_48" style="min-height:13px" aria-hidden="false">insira seu cpf</label> </div>
+      </li>
+      <li class="form-line form-line-column form-col-4 jf-required" data-type="control_phone" id="id_20"><label class="form-label form-label-top" id="label_20" for="input_20_area"> Telefone<span class="form-required">*</span> </label>
+        <div id="cid_20" class="form-input-wide jf-required">
+          <div data-wrapper-react="true"><span class="form-sub-label-container" style="vertical-align:top" data-input-type="areaCode"><input type="tel" id="input_20_area" name="q20_Telefone[area]" class="form-textbox validate[required]" data-defaultvalue="" autoComplete="section-input_20 tel-area-code" value="" data-component="areaCode" aria-labelledby="label_20 sublabel_20_area" required="" /><span class="phone-separate" aria-hidden="true"> -</span><label class="form-sub-label" for="input_20_area" id="sublabel_20_area" style="min-height:13px" aria-hidden="false">Código de área</label></span><span class="form-sub-label-container" style="vertical-align:top" data-input-type="phone"><input type="tel" id="input_20_phone" name="Tel" class="form-textbox validate[required]" data-defaultvalue="" autoComplete="section-input_20 tel-local" value="" data-component="phone" aria-labelledby="label_20 sublabel_20_phone" required="" /><label class="form-sub-label" for="input_20_phone" id="sublabel_20_phone" style="min-height:13px" aria-hidden="false">Telefone</label></span></div>
+        </div>
+      </li>
+      <li class="form-line jf-required" data-type="control_address" id="id_18"><label class="form-label form-label-top form-label-auto" id="label_18" for="input_18_addr_line1"> Endereço<span class="form-required">*</span> </label>
+        <div id="cid_18" class="form-input-wide jf-required">
+          <div summary="" class="form-address-table jsTest-addressField">
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-street-line jsTest-address-lineField"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="rua" name="rua" class="form-textbox validate[required] form-address-line" data-defaultvalue="" autoComplete="section-input_18 address-line1" value="" data-component="address_line_1" aria-labelledby="label_18 sublabel_18_addr_line1" required="" /><label class="form-sub-label" for="input_18_addr_line1" id="sublabel_18_addr_line1" style="min-height:13px" aria-hidden="false">Rua e Número</label></span></span></div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-street-line jsTest-address-lineField"><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="bairro" name="bairro" class="form-textbox form-address-line" data-defaultvalue="" autoComplete="section-input_18 address-line2" value="" data-component="address_line_2" aria-labelledby="label_18 sublabel_18_addr_line2" /><label class="form-sub-label" for="input_18_addr_line2" id="sublabel_18_addr_line2" style="min-height:13px" aria-hidden="false">bairro</label></span></span></div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-city-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="cidade" name="cidade" class="form-textbox validate[required] form-address-city" data-defaultvalue="" autoComplete="section-input_18 address-level2" value="" data-component="city" aria-labelledby="label_18 sublabel_18_city" required="" /><label class="form-sub-label" for="input_18_city" id="sublabel_18_city" style="min-height:13px" aria-hidden="false">Cidade</label></span></span><span class="form-address-line form-address-state-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="uf" name="uf" class="form-textbox validate[required] form-address-state" data-defaultvalue="" autoComplete="section-input_18 address-level1" value="" data-component="state" aria-labelledby="label_18 sublabel_18_state" required="" /><label class="form-sub-label" for="input_18_state" id="sublabel_18_state" style="min-height:13px" aria-hidden="false">Estado</label></span></span></div>
+            <div class="form-address-line-wrapper jsTest-address-line-wrapperField"><span class="form-address-line form-address-zip-line jsTest-address-lineField "><span class="form-sub-label-container" style="vertical-align:top"><input type="text" id="cep" name="cep" class="form-textbox validate[required] form-address-postal" data-defaultvalue="" autoComplete="section-input_18 postal-code" value="" data-component="zip" aria-labelledby="label_18 sublabel_18_postal"  onblur="pesquisacep(this.value);" /><label class="form-sub-label" for="input_18_postal" id="sublabel_18_postal" style="min-height:13px" aria-hidden="false">CEP</label></span></span></div>
+          </div>
+        </div>
+      </li>
+      
+    
+      <li class="form-line jf-required" data-type="control_textbox" id="id_74"><label class="form-label form-label-top form-label-auto" id="label_74" for="input_74"> Senha do Usuario <span class="form-required">*</span> </label>
+        <div id="cid_74" class="form-input-wide jf-required"> <span class="form-sub-label-container" style="vertical-align:top"><input type="password" id="input_74" name="senha" data-type="input-textbox" class="form-textbox validate[required]" data-defaultvalue="" size="20" value="" data-component="textbox" aria-labelledby="label_74 sublabel_input_74" required="" /><label class="form-sub-label" for="input_74" id="sublabel_input_74" style="min-height:13px" aria-hidden="false">insira a sua senha</label></span> </div>
+      </li>
+      <li class="form-line" data-type="control_button" id="id_30">
+        <div id="cid_30" class="form-input-wide">
+            <div data-align="auto" class="form-buttons-wrapper form-buttons-auto   jsTest-button-wrapperField"><input id="input_scl_30" type="reset" value="Limpar" data-component="button"></input><button type="submit" name="cadastrinho" >Cadastrar</button></div>
+        </div>
+      </li>
+      <li style="display:none">Should be Empty: <input type="text" name="website" value="" /></li>
+    </ul>
+  </div>
+
+  
+</form>
+<div class="m-5">
+  <a href="paginafunc.php">
+<button >Voltar</button></a>
+
+<br>
+</div>
+
+</div>
+
+        </div>
+
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+      <script src="https://unpkg.com/scrollreveal"></script>
+      <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+      <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+      <script src="js/script.js"></script>
+      <section class="Contato" id="Contato">
+        <div class="meio-contato">
+          <h3>Nossas redes sociais</h3>
+          <h5>Nós envie uma mensagem</h5>
+          <div class="icons">
+            <a href=""><img src="wpp.png" alt=""><i class='WhatsApp' ></i></a>
+            <a href=""><img src="insta.png" alt=""><i class='bx bxl-instagram-alt' ></i></a>
+            <a href=""><img src="face.png" alt=""><i class='bx bxl-twitter' ></i></a>
+          </div>
+        </div>
+    
+        <div class="meio-contato">
+          <h3>Procurar</h3>
+          <li><a href="#home">Inicio</a></li>
+          <li><a href="#featured">Destaques</a></li>
+          <li><a href="#new">Novo</a></li>
+          <li><a href="#contact">Contato</a></li>
+        </div>
+    
+        <div class="meio-contato">
+          <h3>Nossos serviços</h3>
+          <li><a href="#">Preços</a></li>
+          <li><a href="#">Frete grátis</a></li>
+          <li><a href="#">Cartões de presente</a></li>
+        </div>
+    
+        <div class="meio-contato">
+          <h3>Shopping</h3>
+          <li><a href="#">Tênis</a></li>
+          <li><a href="#">Roupas</a></li>
+          <li><a href="#">Acéssorios</a></li>
+          <li><a href="#">Ofertas</a></li>
+        </div>
+    
+      </section>
+    
+      <div class="last-text">
+        <p>Copyright © 2022 Todos os direitos reservados | Este modelo é feito por Tahmid Ahmed</p>
+      </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    
+    
+    
+        
+        <script src="https://unpkg.com/scrollreveal"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+        <script src="js/script.js"></script>
+  </body>
+  </html> 
